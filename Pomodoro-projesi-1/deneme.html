@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro</title>
+
+    <style>
+        #warning-text {
+            display: grid;
+        }
+
+        #plus {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #minus {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container w-50">
+        <div class="card text-center mt-5">
+            <div class="card-header">
+                <h1 style="font-size: 65px;">Pomodoro</h1>
+            </div>
+            <div class="card-body">
+                <div class="card bg-danger p-2" id="warning-text">
+                    <p class="card-text">Süreyi Başlattıktan Sonra Süre Bitince Aşşağıdaki Listeye Eklenir</p>
+                </div>
+                <h2 class="fs-1 m-2">Zamanlama</h2>
+
+                <div class="row" id="time-plus-minus">
+                    <div class="col-4">
+                        <div class="fs-1 fw-bold m-2">
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="fs-1 fw-bold m-2" id="timer">
+                            <button class="btn btn-secondary mx-2" id="plus">+</button>
+                            <span id="sayaç"><span>0</span>:<span>00</span></span>
+                            <button class="btn btn-secondary-emphasis mx-2" id="minus">-</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="fs-1 fw-bold m-2">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="button">
+                    <button type="button" class="btn btn-primary" id="btnStart">Başlat</button>
+                    <button type="button" class="btn btn-danger" id="btnStop">Durdur</button>
+                    <button type="button" class="btn btn-dark" id="btnReplay">Tekrarla</button>
+                    <div id="buraya-ekle"></div>
+                </div>
+
+
+
+                <input type="text" class="form-control m-2 mt-3" id="btnText" placeholder="Lütfen çalıştığınız dersi yazınız">
+                    
+            </div>
+            <div class="card-footer">
+                <h1>Süre Listesi</h1>
+                <div class="card-body">
+                    <div class="row" id="süre-listesi">
+                        <div class="col-lg-6 px-0">
+                            <h3 class="fw-bold">Ders Adı</h3>
+                        </div>
+                        <div class="col-lg-6 px-0">
+                            <h3 class="fw-bold">Süre</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <hr>
+                            <div style="font-style: italic; width: 20%; text-align: center;" id="lesson-name"></div>
+                        </div>
+                        <div class="col-6">
+                            <hr>
+                            <div style="font-style: italic; width: 10%;" id="time"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
