@@ -6,23 +6,39 @@ document.querySelector("#plus").addEventListener("click", function () {});
 
 document.querySelector("#btnStart").addEventListener("click", function () {
 
-      if (BtnText.value == "") {
-        alert("Lütfen çalışacağınız dersi giriniz");
+      localStorage.setItem("zero", zero);
+      localStorage.setItem("second", second);
 
-      } else {
-            document.querySelector("#warning-text").style.display = "none";
-            startTime();
+      if (BtnText.value == "" ||  (zero == 0 && second == 0)) {
+        alert("Lütfen çalışacağınız dersi giriniz eğer süre girmediyseniz lütfen süre belirtiniz.");
+
+      } else if(!(zero == 0 && second == 0)){
+        TimerStart();
+      } 
+      else {
+        document.querySelector("#warning-text").style.display = "none";
+        startTime();
   }
+      if(zero == 0 && second == 0) {
+        addLesson();
+        addTime();
+      }
+});
+
+document.querySelector("#buraya-ekle").addEventListener("click", () => {
+     TimerStart();
 });
 
 document.querySelector("#btnStop").addEventListener("click", function () {
   let html = `
         <button type="button" class="btn btn-success mt-2" id="button-finish">Bitir</button>
-        <button type="button" class="btn btn-body-tertiary border mt-2" id="button-continue">Devam Et</button>
     `;
+
+  localStorage.setItem("zero2" , zero);
+  localStorage.setItem("second2" , second);
+  
   document.querySelector("#buraya-ekle").innerHTML = html;
 });
-
 
 document.querySelector("#buraya-ekle").addEventListener("click", () => {
   document.querySelector("#buraya-ekle").innerHTML = "";
@@ -30,6 +46,13 @@ document.querySelector("#buraya-ekle").addEventListener("click", () => {
     addTime();
 });
 
+function zeroTime() {
+    if(zero == 0 && second == 0) {
+      addTime();
+      addLesson();
+    }
+    console.log(zeroTime);
+}
 
 Plus.addEventListener("click", function Plusfunction(){
   zero++;
@@ -45,34 +68,48 @@ Minus.addEventListener("click", function Minusfunction(){
     }
 });
 
-var zero = "0";
-var second = "00";
+var zero = 0;
+var second = 0;
 
 function startTime() {
   let html = `
-        <span>${zero}</span>:<span>${second}</span>
+        <span>${zero < 10 ? "0" + zero : zero}</span>:<span>${second < 10 ? "0" + second : second}</span>
     `;
   document.querySelector("#sayaç").innerHTML = html;
-
 }
 
+function TimerStart() {
+    let intervalId = setInterval(function() {
+        second--
+
+        if(second == -1) {
+          zero--
+          second = 59;
+        } else if(zero == 0 && second == 0) {
+            clearInterval(intervalId);
+            console.log("Interval Durduruldu")
+        }
+
+        console.log(second);
+        console.log(zero);
+        startTime();
+    }, 1000);
+}
+
+function TimeStop() {
+  
+}
 
 function addLesson() {
-
     let html = `
         ${BtnText.value}
     `
     document.querySelector("#lesson-name").insertAdjacentHTML("afterbegin", html);
-
 }
 
-
-
 function addTime() {
-
   let html = `
-      ${zero}:${second}
+      ${localStorage.getItem("zero") < 10 ? "0" + localStorage.getItem("zero") : localStorage.getItem("zero")}:${localStorage.getItem("second") < 10 ? "0" + localStorage.getItem("second") : localStorage.getItem("second")}
   `
   document.querySelector("#time").insertAdjacentHTML("afterbegin", html);
-
 }
