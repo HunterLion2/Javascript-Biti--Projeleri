@@ -16,10 +16,16 @@
 
         #plus {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: inline-block;
         }
 
         #minus {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: inline-block;
+        }
+
+        #btnStop {
+            display: none;
         }
 
     </style>
@@ -40,19 +46,19 @@
                 <h2 class="fs-1 m-2">Zamanlama</h2>
 
                 <div class="row" id="time-plus-minus">
-                    <div class="col-4">
+                    <div class="col-lg-3">
                         <div class="fs-1 fw-bold m-2">
 
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-6">
                         <div class="fs-1 fw-bold m-2" id="timer">
                             <button class="btn btn-secondary mx-2" id="plus">+</button>
                             <span id="sayaç"><span id="dakika">00</span>:<span id="saniye">00</span></span>
                             <button class="btn btn-secondary-emphasis mx-2" id="minus">-</button>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-3">
                         <div class="fs-1 fw-bold m-2">
 
                         </div>
@@ -87,11 +93,11 @@
                     <div class="row">
                         <div class="col-6">
                             <hr>
-                            <div style="font-style: italic; width: 20%; text-align: center;" id="lesson-name"></div>
+                            <div style="font-style: italic; width: 25%; text-align: center;" id="lesson-name"></div>
                         </div>
                         <div class="col-6">
                             <hr>
-                            <div style="font-style: italic; width: 10%;" id="time"></div>
+                            <div style="font-style: italic; width: 15%;" id="time"></div>
                         </div>
                     </div>
                 </div>
