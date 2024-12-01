@@ -24,7 +24,19 @@
             display: inline-block;
         }
 
-        #btnStop {
+        #btnStart {
+            display: inline-block;
+        }
+
+        #btnReplay {
+            display: inline-block;
+        }
+
+        #Bitir {
+            display: none;
+        }
+
+        #Continue {
             display: none;
         }
 
@@ -70,7 +82,14 @@
                     <button type="button" class="btn btn-primary" id="btnStart">Başlat</button>
                     <button type="button" class="btn btn-danger" id="btnStop">Durdur</button>
                     <button type="button" class="btn btn-dark" id="btnReplay">Tekrarla</button>
-                    <div id="buraya-ekle"></div>
+                    <button type="button" class="btn btn-success" id="Bitir"></button>
+                    <button type="button" class="btn btn-dark" id="Continue"></button>
+
+                    <div class="row">
+                        <div id="Bitir" class=""></div>
+                        <div id="Continue" class=""></div>
+                    </div>
+                    
                     
                 </div>
 
@@ -93,7 +112,7 @@
                     <div class="row">
                         <div class="col-6">
                             <hr>
-                            <div style="font-style: italic; width: 25%; text-align: center;" id="lesson-name"></div>
+                            <div style="font-style: italic; width: 20%; text-align: center;" id="lesson-name"></div>
                         </div>
                         <div class="col-6">
                             <hr>
