@@ -14,10 +14,20 @@
     font-style: normal;
 }
 
-#round-border {
-    background-color: rgb(253, 77, 13);
-    padding: 3px;
-    border-radius: 25px;
+#progress-bar {
+    width: 50%;
+    height: 20px;
+    padding: 0px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: #1DB954;
+    /* Spotify yeşil rengi */
 }
 
 .rower-timer {

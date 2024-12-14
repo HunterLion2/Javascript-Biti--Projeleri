@@ -1,7 +1,7 @@
 class MusicPlayer { // Buradaki Object kullanımı ES6 versiyonudur.
     constructor(musicList) {
         this.musicList = musicList;
-        this.index = 1;
+        this.index = 0;
     }
 
     getMusic() {
