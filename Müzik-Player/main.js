@@ -76,12 +76,19 @@ next.addEventListener("click", () => {
 // Ses kontrol çubuğu'nun İlerlemesi
 
 function ProgressBar() {
-    setInterval(function() {
+    const intervalId = setInterval(function() {
+        const duration = audio.duration;
+        const currentTime = audio.currentTime;
+        console.log(duration, currentTime);
 
+        let explain = Math.floor(currentTime) / Math.floor(duration);
+        console.log(explain * 100);
 
-        let explain = // audio.currentTime / Toplam Dakika
-
-        progressBar.style.width = explain + "%";
+        progressBar.style.width = (explain * 100) + "%";
+        
+        if(explain == 1) {
+            clearInterval(intervalId);
+        }
     }, 1000)
 }
 
