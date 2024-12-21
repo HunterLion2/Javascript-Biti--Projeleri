@@ -16,11 +16,16 @@
 
     <style>
         header {
-            background-color: #FFFBF5;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            background-color: #fff;
+            width: 100%;
         }
 
         main {
-            background-color: #F7EFE5;
+            background-color: #fdfdfd;
             height: 100%;
         }
 
@@ -33,14 +38,36 @@
             border-radius: 25px;
         }
 
-        .siparişler {
-            background-color: #cccccc;
-        }
-
         body {
             font-family: "Playfair Display", serif;
             font-optical-sizing: auto;
             font-style: normal;
+        }
+
+        #çantalar:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        #çanta-img {
+            width: 80%;
+        }
+
+        #sepete-ekle {
+            text-decoration: none;
+            color: #000000;
+            background-color: rgb(255, 96, 0);
+            padding: 10px;
+            border-radius: 15px;
+            margin-top: auto;
+        }
+
+        #sepete-ekle:hover {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: rgb(255, 134, 58);
+            padding: 10px;
+            border-radius: 15px;
+            margin-top: auto;
         }
 
     </style>
@@ -80,7 +107,6 @@
             </nav>
         </div>
     </header>
-
 
     <main>
         <div class="container text-center pt-4 pb-4">
@@ -147,7 +173,7 @@
                                         Corrupti!</p>
                                 </div>
                                 <div class="col-lg-6 mt-4 p-3">
-                                    <img src="img/3.resim.png" alt="" width="350px"  height="300px">
+                                    <img src="img/3.resim.png" alt="" width="350px" height="300px">
                                 </div>
                             </div>
                         </div>
@@ -155,25 +181,115 @@
                 </div>
             </div>
         </div>
+
+        <hr class="mt-0 mb-0">
+
         <div class="siparişler">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="text-center">
-                            <img src="" alt="">
+                <div class="row mt-5">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta1.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Kırmızı Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta2.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta3.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta4.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
                     </div>
                 </div>
-            </div>  
+                <div class="row mt-5">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta5.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Kırmızı Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta6.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta7.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta8.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta9.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Kırmızı Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta10.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta11.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card mx-1 h-100 p-3" id="çantalar">
+                            <img src="img/çanta12.png" alt="" id="çanta-img">
+                            <h1 class="text-center">Mavi Çanta</h1>
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </main>
 
