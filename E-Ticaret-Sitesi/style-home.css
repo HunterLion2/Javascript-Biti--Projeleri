@@ -64,3 +64,13 @@ body {
 #ürün-aciklamaları {
     margin-top: auto;
 }
+
+.circle-string {
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 50%;
+}
+
+#sepet-number {
+    display: none;
+}
