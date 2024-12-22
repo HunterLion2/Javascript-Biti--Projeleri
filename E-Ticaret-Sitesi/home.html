@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,77 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style-home.css">
     <title>Document</title>
-
-    <style>
-        header {
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-            background-color: #fff;
-            width: 100%;
-        }
-
-        main {
-            background-color: #fdfdfd;
-            height: 100%;
-        }
-
-        .header-link {
-            font-size: 30px;
-        }
-
-        .bluradd {
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 25px;
-        }
-
-        body {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        #çantalar:hover {
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-            animation-name: example;
-            animation-duration: 2s;
-            animation-direction: alternate;
-        }
-
-        #çanta-img {
-            margin-top: auto;
-            width: 80%;
-        }
-
-        #sepete-ekle {
-            text-decoration: none;
-            color: #000000;
-            background-color: rgb(255, 96, 0);
-            padding: 10px;
-            border-radius: 15px;
-            margin-top: auto;
-        }
-
-        #sepete-ekle:hover {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: rgb(255, 134, 58);
-            padding: 10px;
-            border-radius: 15px;
-            margin-top: auto;
-        }
-
-        #ürün-basliklari {
-            margin-top: auto;
-        }
-
-        #ürün-aciklamaları {
-            margin-top: auto;
-        }
-    </style>
-
+    
 </head>
 
 <body>
@@ -111,6 +45,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">İletişim</a>
                                 </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-person"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-pen"></i>Satıcı Profili</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -127,6 +69,7 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-lg-6 mt-5 p-5">
+                                    <h3>Site Hakkında Kullanıcılarımızın Düşünceleri</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magnam fugit
                                         distinctio modi
                                         minima eum molestiae rem beatae molestias et. Harum fugit temporibus dolore illo
@@ -149,6 +92,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-lg-6 mt-5 p-5">
+                                    <h3>Site Hakkında Kullanıcılarımızın Düşünceleri</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magnam fugit
                                         distinctio modi
                                         minima eum molestiae rem beatae molestias et. Harum fugit temporibus dolore illo
@@ -170,6 +114,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-lg-6 mt-5 p-5">
+                                    <h3>Site Hakkında Kullanıcılarımızın Düşünceleri</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, magnam fugit
                                         distinctio modi
                                         minima eum molestiae rem beatae molestias et. Harum fugit temporibus dolore illo
@@ -204,6 +149,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Kırmızı Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">7500</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -213,6 +159,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Mavi Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">5200</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -222,6 +169,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Yeşil Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">18999</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -231,6 +179,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Su Mavisi Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">4500</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -242,6 +191,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Pembe Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">4500</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -251,6 +201,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Koyu Mavi Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">27850</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -260,6 +211,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Siyah Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">15500</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -269,6 +221,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Deri Çanta</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">30000</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -280,6 +233,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Deri Çantalar</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">87999</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -289,6 +243,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Yeşil Saat</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">27500</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -298,6 +253,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Turuncu Saat</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">97850</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>
@@ -307,6 +263,7 @@
                             <h1 class="text-center" id="ürün-basliklari">Siyah Saat</h1>
                             <p class="text-center" id="ürün-aciklamaları">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Omnis nobis aliquid, maxime neque et nihil.</p>
+                            <span class="text-center"><span class="text-center fs-3" id="product-price">37435</span> <span class="fs-5">TL</span></span>
                             <a href="" class="text-center" id="sepete-ekle">Sepete Ekle</a>
                         </div>
                     </div>

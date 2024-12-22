@@ -1,0 +1,66 @@
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color:  rgb(255, 255, 255, 0.8);
+    width: 100%;
+}
+
+main {
+    background-color: #fdfdfd;
+    height: 100%;
+}
+
+.header-link {
+    font-size: 30px;
+}
+
+.bluradd {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#çantalar:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+#çanta-img {
+    margin-top: auto;
+    width: 80%;
+}
+
+#sepete-ekle {
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(255, 96, 0);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: auto;
+}
+
+#sepete-ekle:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(255, 134, 58);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: auto;
+}
+
+#ürün-basliklari {
+    margin-top: auto;
+}
+
+#ürün-aciklamaları {
+    margin-top: auto;
+}
