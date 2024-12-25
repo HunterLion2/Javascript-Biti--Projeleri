@@ -28,7 +28,7 @@
         }
 
         .input-value-information {
-            width: 15%;
+            width: 100%;
         }
 
         #sepet-img-information {
@@ -38,6 +38,11 @@
 
         .sepet-boş-warning {
             display: none;
+        }
+
+        .sepet-bölümü-in {
+            display: flex;
+            align-items: center;
         }
 
     </style>
@@ -114,17 +119,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mt-4 sepet-ürünler-bölümü">
-                        <div class="sepet-bölümü card p-3" id="sepet-part">
-                            <div class="row">
-                                <div class="col-lg-4 px-3">
+                        <div class=" card p-2" id="sepet-part">
+                            <div class="row sepet-bölümü-in">
+                                <div class="col-lg-4 px-5">
                                     <img src="img/çanta11.png" alt="" id="sepet-img-information">
                                 </div>
-                                <div class="col-lg-8 px-3 mt-2">
-                                    <h2 id="sepet-head-information">asd</h2>
-                                    <p id="sepet-paragraph-information">Lorem ipsum dolor, sit amet consectetur
-                                        adipisicing
-                                        elit. Natus, asperiores.</p>
+                                <div class="col-lg-4 px-3 mt-3">
+                                    <h2 id="sepet-head-information">Turuncu Saat</h2>
+                                    <p id="sepet-paragraph-information">Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Saepe temporibus perspiciatis commodi facilis? Expedita ad,
+                                        minima porro aspernatur tenetur ipsum aliquid voluptate, blanditiis quo at
+                                        accusantium eius magni ex. Perferendis?</p>
+
+                                </div>
+                                <div class="col-2">
                                     <input type="number" name="" id="" class="form-control input-value-information">
+                                </div>
+                                <div class="col-2 px-2">
+                                    <p id="price-sepet">19900</p>
                                 </div>
                             </div>
                         </div>
