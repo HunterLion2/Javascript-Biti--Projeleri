@@ -36,22 +36,21 @@
             height: 150px;
         }
 
-        .sepet-boş-warning {
-            display: none;
-        }
-
         .sepet-bölümü-in {
             display: flex;
             align-items: center;
         }
 
+        #Adet-Sayısı {
+            display: none;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <header>
+    <header id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -103,7 +102,7 @@
 
     <main class="mt-3 mb-4">
 
-        <div class="sepet-boş-warning">
+        <div id="sepet-boş-warning">
             <div class="container">
                 <div class="card border-danger mb-3">
                     <div class="card-header">UYARI</div>
@@ -115,22 +114,20 @@
         </div>
 
 
-        <div class="sepet-bölümü">
+        <div>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 mt-4 sepet-ürünler-bölümü">
+                <div class="row" id="sepet-bölümü">
+                    <!-- <div class="col-lg-12 mt-4 sepet-ürünler-bölümü">
                         <div class=" card p-2" id="sepet-part">
                             <div class="row sepet-bölümü-in">
-                                <div class="col-lg-4 px-5">
+                                <div class="col-lg-4 px-5 p-3">
                                     <img src="img/çanta11.png" alt="" id="sepet-img-information">
                                 </div>
                                 <div class="col-lg-4 px-3 mt-3">
                                     <h2 id="sepet-head-information">Turuncu Saat</h2>
                                     <p id="sepet-paragraph-information">Lorem, ipsum dolor sit amet consectetur
-                                        adipisicing elit. Saepe temporibus perspiciatis commodi facilis? Expedita ad,
-                                        minima porro aspernatur tenetur ipsum aliquid voluptate, blanditiis quo at
-                                        accusantium eius magni ex. Perferendis?</p>
-
+                                        adipisicing elit. Saepe temporibus perspiciatisasdasd asdasda sdasda asdas</p>
+                                    <span id="Adet-Sayısı">0</span>
                                 </div>
                                 <div class="col-2">
                                     <input type="number" name="" id="" class="form-control input-value-information">
@@ -140,28 +137,38 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-5 mt-4">
-                        <div class="card p-3">
-                            <h1 class="text-center border-bottom">Toplam</h1>
-                            <div class="row">
-                                <div class="col-4">
-                                    <h3 class="text-center border-bottom">Ürün</h3>
-                                    <h5 id="ödeme-information-head" class="text-center"></h5>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-center border-bottom">Fiyat</h3>
-                                    <p class="text-center fs-5" id="ödeme-informaiton-price"></p>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-center border-bottom">Adet</h3>
-                                    <p class="text-center fs-5 " id="ödeme-information-number"></p>
-                                </div>
+                    </div> -->
+                </div>
+                <div class="mt-4" id="sepetToplamBölümü">
+                    <div class="card p-3">
+                        <h1 class="text-center border-bottom">Toplam</h1>
+                        <div class="row">
+                            <div class="col-4">
+                                <h3 class="text-center border-bottom">Ürün</h3>
+                                <h5 id="ödeme-information-head" class="text-center mt-2"></h5>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="text-center border-bottom">Fiyat</h3>
+                                <p class="text-center fs-5 mt-2" id="ödeme-informaiton-price"></p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="text-center border-bottom">Adet</h3>
+                                <p class="text-center fs-5 mt-2" id="ödeme-information-number"></p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        
+                        <hr class="mt-5">
 
+                        <div class="row mt-1">
+                            <div class="col-lg-8">
+                                <h2>Toplam Fiyat:</h2>
+                            </div>
+                            <div class="col-lg-4">
+                                <span id="toplamFiyat"></span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
             </div>
 
         </div>
@@ -196,8 +203,6 @@
                     </ul>
                 </div>
 
-
-
             </div>
         </div>
 
@@ -205,6 +210,9 @@
     </footer>
 
     <script src="home-script.js"></script>
+    <script src="Sepet.js"></script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

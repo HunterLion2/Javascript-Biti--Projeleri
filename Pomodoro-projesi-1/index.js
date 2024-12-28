@@ -160,7 +160,7 @@ function TimerStart() {
         }
 
         startTime();
-    }, 10);
+    }, 1000);
 }
 
 
