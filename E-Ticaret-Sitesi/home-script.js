@@ -55,8 +55,5 @@ sepetLink.addEventListener("click", function() {
 });
 
 
-// SEPET ÜRÜN YÜKLEME KISMI
-//////////////////////////////////////////////////
-
 
 

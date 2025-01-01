@@ -1,12 +1,14 @@
 const SepetBölümü = document.querySelector("#sepet-bölümü");
 const SepetToplambölümü = document.querySelector("#sepetToplamBölümü");
 const ödemeBaşlık = document.querySelector("#ödeme-information-head");
+const ödemeFiyat = document.querySelector("#ödeme-informaiton-price");
+const ödemeAdet = document.querySelector("#ödeme-information-number");
 const Toplam = document.querySelector("#sepetToplamBölümü");
 
 document.addEventListener("DOMContentLoaded", () => {
     const sepetItems = JSON.parse(localStorage.getItem("sepetItems")) || [];
 
-    console.log(localStorage.getItem("number"));
+    console.log(JSON.parse(localStorage.getItem("sepetItems")));
 
     if (localStorage.getItem("number") === null) {
         SepetWarning.style.display = 'inline';
@@ -34,26 +36,33 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <p id="price-sepet">${item.price}</p>
                                 </div>
                                 <div class = "col-2 px-1">
-                                    <a href="" id= "ürün-silme"><i class="fa-solid fa-xmark"></i></a> 
+                                    <a href="" class="ürün-silme"><i class="fa-solid fa-xmark"></i></a> 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
             `;
-            
-            // document.querySelector("#ürün-silme").addEventListener("click", () => {
-
-            // })
 
             SepetBölümü.insertAdjacentHTML("afterbegin",Sepet);
+            
+            if(item.adet < localStorage.getItem("number")) {
+                SepetBölümü.innerHTML = '';
+            }
 
-            const ToplamBölümü = `
-                    ${item.head}
+            const ToplamBölümüÜrün = `
+                ${item.head}
             `; 
-            ödemeBaşlık.innerHTML = ToplamBölümü;   
+            ödemeBaşlık.innerHTML = ToplamBölümüÜrün;   
 
+            const ToplamBölümAdet = `
+                ${item.adet}
+            `;
+            ödemeAdet.innerHTML = ToplamBölümAdet;
 
+            const ToplamBölümFiyat = `
+                ${item.price * item.adet}
+            `;
+            ödemeFiyat.innerHTML = ToplamBölümFiyat;
 
         })
     }

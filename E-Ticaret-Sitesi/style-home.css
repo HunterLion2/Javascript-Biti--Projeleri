@@ -35,6 +35,7 @@ body {
 }
 
 #çanta-img {
+    margin: 0 auto; 
     margin-top: auto;
     width: 80%;
 }
