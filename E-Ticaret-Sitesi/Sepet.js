@@ -43,11 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
             `;
 
-            SepetBölümü.insertAdjacentHTML("afterbegin",Sepet);
             
-            if(item.adet < localStorage.getItem("number")) {
-                SepetBölümü.innerHTML = '';
-            }
+
+            SepetBölümü.insertAdjacentHTML("afterbegin",Sepet);
+
+            // if(item.adet < this.item.adet) {
+            //     SepetBölümü.innerHTML = '';
+            // }
 
             const ToplamBölümüÜrün = `
                 ${item.head}
@@ -65,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ödemeFiyat.innerHTML = ToplamBölümFiyat;
 
         })
+console.log(localStorage.getItem("adet"))
     }
 
 
