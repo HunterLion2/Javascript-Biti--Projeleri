@@ -40,7 +40,15 @@ sepetAddButtons.forEach(button => {
 
         // Ürün Bilgilerini LocalStorage'e Kaydet
 
+
         let sepetItems = JSON.parse(localStorage.getItem("sepetItems")) || [];
+        sepetItems = sepetItems.filter(item => item.head !== head);
+        
+        // item.head !== head koşulu, item.head ile head'in eşit olup olmadığını kontrol eder.
+        // Eğer item.head ve head eşit değilse (!==), bu item yeni diziye eklenir.
+        // Eğer item.head ve head eşitse, bu item yeni diziye eklenmez.
+        
+
         sepetItems.push({ img, head, explain, price, adet});
         localStorage.setItem("sepetItems", JSON.stringify(sepetItems));
 
